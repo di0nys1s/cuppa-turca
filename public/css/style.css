@@ -110,16 +110,13 @@ body {
 }
 .heading-primary--main {
   display: block;
+  margin-top: 4rem;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  /*
-  animation-delay: 3s;
-  animation-iteration-count: 3;
-  */
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--main {
@@ -268,6 +265,7 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+  margin-top: 4rem;
 }
 .btn--white::after {
   background-color: #fff;
@@ -953,7 +951,7 @@ body {
 }
 
 .header {
-  height: 85vh;
+  height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(72, 45, 74, 0.8), rgba(48, 25, 52, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
@@ -977,14 +975,12 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
 }
-.header__logo-box {
-  position: fixed;
-  top: 4.5rem;
-  left: 4.5rem;
-}
 .header__logo {
-  height: 7rem;
+  height: 10rem;
   border-radius: 100%;
+  position: relative;
+  top: -2rem;
+  bottom: 2rem;
 }
 .header__text-box {
   position: absolute;
@@ -992,6 +988,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .navigation__checkbox {
@@ -1012,14 +1015,14 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .navigation__button {
-    top: 4.5rem;
-    left: 4.5rem;
+    top: 3.9rem;
+    left: 3.9rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .navigation__button {
-    top: 4.5rem;
-    right: 4.5rem;
+    top: 3.5rem;
+    right: 3.5rem;
   }
 }
 .navigation__background {

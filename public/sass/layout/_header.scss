@@ -1,5 +1,6 @@
 .header {
-    height: 85vh;
+
+    height: 100vh;
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)),
@@ -29,15 +30,18 @@
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 
-    &__logo-box {
-        position: fixed;
-        top: 4.5rem;
-        left: 4.5rem;
-    }
+    // &__logo-box {
+    //     position: relative;
+    //     top: 4.5rem;
+    //     left: 5rem;
+    // }
 
     &__logo {
-        height: 7rem;
+        height: 10rem;
         border-radius: 100%;
+        position: relative;
+        top: -2rem;
+        bottom: 2rem;
     }
 
     &__text-box {
@@ -47,4 +51,12 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
