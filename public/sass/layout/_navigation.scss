@@ -80,8 +80,8 @@
         &:link,
         &:visited {
             display: inline-block;
-            font-size: 3rem;
-            font-weight: 300;
+            font-size: 5rem;
+            font-weight: 400;
             padding: 1rem 2rem;
             color: $color-white;
             text-decoration: none;
@@ -135,7 +135,7 @@
             content: "";
             position: absolute;
             left: 0;
-            transition: all .2s;
+            transition: all .4s;
         }
 
         &::before {

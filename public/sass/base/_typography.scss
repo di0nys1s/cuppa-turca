@@ -80,9 +80,18 @@ body {
     color: $color-smooth;
     margin-bottom: 4rem;
     text-align: center;
-    display : block;
-
+    display: block;
 }
+
+.heading-kunefe {
+    @extend .heading-secondary;
+    color: $color-primary;
+    margin-bottom: 4rem;
+    text-align: center;
+    display: block;
+}
+
+
 
 .paragraph {
     font-size: $default-font-size;
