@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
@@ -191,7 +192,8 @@ body {
 }
 
 .about_paragraph {
-  margin: 2rem 5rem;
+  margin: 2rem 19rem;
+  text-align: justify;
 }
 
 .u-center-text {
@@ -242,6 +244,50 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 5.5rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1500;
+  /* Style the icon bar links */
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+  /* Style the social media icons with color, if you want */
+}
+.icon-bar a:hover {
+  background-color: #3a243b;
+}
+.icon-bar .facebook {
+  background: #3B5998;
+  color: white;
+}
+.icon-bar .twitter {
+  background: #55ACEE;
+  color: white;
+}
+.icon-bar .instagram {
+  background: #F56040;
+  color: white;
+}
+.icon-bar .linkedin {
+  background: #007bb5;
+  color: white;
+}
+.icon-bar .youtube {
+  background: #bb0000;
+  color: white;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -321,6 +367,51 @@ body {
   transform: translateY(0);
 }
 
+#back-to-top-button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#back-to-top-button::after {
+  content: "";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#back-to-top-button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#back-to-top-button:active {
+  background-color: #555;
+}
+
+#back-to-top-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 500px) {
+  #back-to-top-button {
+    margin: 30px;
+  }
+}
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -1030,7 +1121,7 @@ body {
   right: 5rem;
   background-image: radial-gradient(#482d4a, #eee);
   z-index: 1000;
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 @media only screen and (max-width: 56.25em) {
   .navigation__background {
@@ -1052,7 +1143,7 @@ body {
   z-index: 1500;
   opacity: 0;
   width: 0;
-  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .navigation__list {
   position: absolute;
@@ -1117,10 +1208,10 @@ body {
   top: 0.8rem;
 }
 .navigation__button:hover .navigation__icon::before {
-  top: -1rem;
+  top: -10px;
 }
 .navigation__button:hover .navigation__icon::after {
-  top: 1rem;
+  top: 10px;
 }
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent;
