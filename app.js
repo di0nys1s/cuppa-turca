@@ -8,6 +8,7 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(3000, function() {
-  console.log("Server is running on port 3000");
+let port = process.env.PORT;
+app.listen(port || 3000, function() {
+  console.log("Server is started at port 3000");
 });
