@@ -9,6 +9,6 @@ app.get("/", function(req, res) {
 });
 
 let port = process.env.PORT;
-app.listen(port || 3000, function() {
-  console.log("Server is started at port 3000");
+app.listen(port || 5000, function() {
+  console.log("Server is started at port 5000");
 });
